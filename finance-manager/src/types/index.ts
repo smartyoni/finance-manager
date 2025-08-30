@@ -2,13 +2,23 @@ export interface FixedExpense {
   id: string;
   name: string;
   amount: number;
+  paymentDate: string;
   paid: boolean;
+}
+
+export interface FixedExpenseTemplate {
+  id: string;
+  name: string;
+  amount: number;
+  paymentDate: string;
+  active: boolean;
 }
 
 export interface VariableExpense {
   id: string;
   name: string;
   amount: number;
+  paymentDate: string;
   paid: boolean;
 }
 
@@ -32,8 +42,18 @@ export interface OperationalExpense {
 export interface CommissionIncome {
   id: string;
   name: string;
+  roomName: string;
+  balanceDate: string;
+  deposit: number;
+  monthlyRent: number;
+  otherFees: number;
+  commission: number;
+  actualAmount: number;
+  propertyAddress: string;
+  type: '양타' | '단타';
   amount: number;
   received: boolean;
+  memo: string;
 }
 
 export interface MonthlyData {
