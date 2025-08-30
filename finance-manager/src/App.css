@@ -1,0 +1,702 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f7f6f3;
+  color: #37352f;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+  max-width: calc(100% - 260px);
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #37352f;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #787774;
+  margin: 0 0 32px 0;
+}
+
+.month-selector {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #e9e9e7;
+  border-radius: 6px;
+  background: white;
+  color: #37352f;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.month-selector:hover {
+  background-color: #f1f1ef;
+  border-color: #d3d3d1;
+}
+
+.month-selector:focus {
+  outline: none;
+  border-color: #2383e2;
+  box-shadow: 0 0 0 2px rgba(35, 131, 226, 0.2);
+}
+
+.notion-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: all 0.2s ease;
+}
+
+.notion-card:hover {
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.2) 0px 3px 6px;
+}
+
+.notion-input {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #e9e9e7;
+  border-radius: 6px;
+  background: white;
+  color: #37352f;
+  transition: all 0.2s ease;
+  width: 200px;
+  text-align: right;
+}
+
+.notion-input:hover {
+  background-color: #f1f1ef;
+  border-color: #d3d3d1;
+}
+
+.notion-input:focus {
+  outline: none;
+  border-color: #2383e2;
+  box-shadow: 0 0 0 2px rgba(35, 131, 226, 0.2);
+  background-color: white;
+}
+
+.notion-tabs {
+  display: flex;
+  border-bottom: 1px solid #e9e9e7;
+  margin-bottom: 24px;
+}
+
+.notion-tab {
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #787774;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.notion-tab:hover {
+  background-color: #f1f1ef;
+  color: #37352f;
+}
+
+.notion-tab.active {
+  color: #2383e2;
+  border-bottom-color: #2383e2;
+  background-color: #f8fcff;
+}
+
+.notion-tab-content {
+  min-height: 200px;
+}
+
+.notion-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.notion-summary-item {
+  text-align: center;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+  transition: all 0.2s ease;
+}
+
+.notion-summary-item:hover {
+  background-color: #f5f5f5;
+}
+
+.notion-summary-label {
+  font-size: 14px;
+  color: #787774;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.notion-summary-amount {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.notion-summary-amount.income {
+  color: #0f7b0f;
+}
+
+.notion-summary-amount.expense {
+  color: #d73502;
+}
+
+.notion-summary-amount.profit {
+  color: #0f7b0f;
+}
+
+.notion-summary-amount.loss {
+  color: #d73502;
+}
+
+.notion-table-container {
+  overflow-x: auto;
+}
+
+.notion-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.notion-table th {
+  background-color: #f7f6f3;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #37352f;
+  border-bottom: 1px solid #e9e9e7;
+}
+
+.notion-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  vertical-align: middle;
+}
+
+.notion-table tbody tr:hover {
+  background-color: #f8f8f8;
+}
+
+.notion-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.notion-input-small {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border: 1px solid #e9e9e7;
+  border-radius: 4px;
+  background: white;
+  color: #37352f;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: right;
+}
+
+.notion-input-small:hover {
+  background-color: #f1f1ef;
+  border-color: #d3d3d1;
+}
+
+.notion-input-small:focus {
+  outline: none;
+  border-color: #2383e2;
+  box-shadow: 0 0 0 2px rgba(35, 131, 226, 0.2);
+  background-color: white;
+}
+
+.month-navigator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e7;
+  background: white;
+  color: #37352f;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.nav-button:hover {
+  background: #f1f1ef;
+  border-color: #d3d3d1;
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.current-month {
+  text-align: center;
+  min-width: 180px;
+}
+
+.month-year {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #37352f;
+  margin-bottom: 4px;
+}
+
+.month-subtitle {
+  display: block;
+  font-size: 14px;
+  color: #787774;
+  font-weight: 400;
+}
+
+.income-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.income-input {
+  width: 240px;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.income-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+.expense-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tab-buttons {
+  display: flex;
+  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 18px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  background: rgba(80, 175, 138, 0.1);
+  color: #50af8a;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #50af8a 0%, #4a9d7f 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(80, 175, 138, 0.3);
+  border-radius: 12px 12px 0 0;
+  margin: 4px 4px 0 4px;
+}
+
+.tab-content {
+  padding: 28px;
+  min-height: 320px;
+  background: white;
+}
+
+.summary-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-item {
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  flex: 1;
+  margin: 0 8px;
+}
+
+.summary-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.summary-amount {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.income-amount {
+  color: #50af8a;
+}
+
+.expense-amount {
+  color: #e74c3c;
+}
+
+.profit-amount {
+  color: #3498db;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.expense-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.expense-item label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.expense-input {
+  width: 140px;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  text-align: right;
+  font-weight: 600;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.expense-input:focus {
+  outline: none;
+  border-color: #50af8a;
+  box-shadow: 0 0 15px rgba(80, 175, 138, 0.2);
+  transform: scale(1.05);
+}
+
+.add-button {
+  background: linear-gradient(135deg, #50af8a 0%, #4a9d7f 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(80, 175, 138, 0.4);
+}
+
+.operational-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: end;
+}
+
+.operational-form input,
+.operational-form select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.operational-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.operational-table th,
+.operational-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.operational-table th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.sidebar {
+  width: 260px;
+  background: white;
+  border-left: 1px solid #e9e9e7;
+  padding: 24px 20px;
+  overflow-y: auto;
+  box-shadow: rgba(15, 15, 15, 0.04) -2px 0px 4px;
+}
+
+.save-button {
+  background: #2383e2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover:not(:disabled) {
+  background: #1a6cc7;
+}
+
+.save-button:disabled {
+  background: #9b9b9b;
+  cursor: not-allowed;
+}
+
+.sidebar h3 {
+  color: #37352f;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.year-folder {
+  margin-bottom: 16px;
+}
+
+.year-header {
+  background: #f1f1ef;
+  color: #37352f;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: 1px solid #e9e9e7;
+}
+
+.year-header:hover {
+  background: #e9e9e7;
+}
+
+.year-content {
+  background: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 6px;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.month-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  font-size: 14px;
+  color: #37352f;
+}
+
+.month-item:hover {
+  background: #f8f8f8;
+}
+
+.month-item.active {
+  background: #e3f2fd;
+  color: #2383e2;
+  font-weight: 500;
+}
+
+.month-item:last-child {
+  border-bottom: none;
+}
+
+.month-summary {
+  font-size: 12px;
+  color: #787774;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.month-item:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  transform: scale(1.1);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.income-section-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: all 0.2s ease;
+}
+
+.income-section-card:hover {
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.2) 0px 3px 6px;
+}
+
+.expense-section-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  transition: all 0.2s ease;
+}
+
+.expense-section-card:hover {
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.2) 0px 3px 6px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #37352f;
+  margin: 0;
+}
+
+.section-total {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #f7f6f3;
+  border: 1px solid #e9e9e7;
+}
+
+.section-total.income {
+  color: #0f7b0f;
+  background: rgba(15, 123, 15, 0.1);
+  border-color: rgba(15, 123, 15, 0.2);
+}
+
+.section-total.expense {
+  color: #d73502;
+  background: rgba(215, 53, 2, 0.1);
+  border-color: rgba(215, 53, 2, 0.2);
+}
